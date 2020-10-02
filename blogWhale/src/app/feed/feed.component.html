@@ -1,3 +1,4 @@
+<div class="bgimg1">
 <div class="container">
     
     <div class="row ">
@@ -7,23 +8,23 @@
 
         <div class="col-md-8">
 
-            <h3 class="text-center mb-4 texto1">Postagens sobre vida marítima</h3>
+            <h3 class="text-center mb-4 mt-4 text-light texto1">Postagens sobre vida marítima</h3>
 
             <div class="form-group texto2">
-                <label class="texto2" for="titulo">Título:</label>
+                <label class="texto2 text-light" for="titulo">Título:</label>
                 <input type="text" class="form-control texto2" id="titulo" 
                 placeholder="Digite o título aqui">
             </div>
 
             <div class="form-group texto2">
-                <label class="text-monospace" for="texto">Texto:</label>
+                <label class="text-monospace text-light" for="texto">Texto:</label>
                 <textarea class="form-control" id="texto" rows="3" placeholder="Digite o texto da postagem aqui"></textarea>
             </div>
 
             <div class="row d-flex align-itens-end texto2">
                 <div class="col-md-6">
                     <div class="form-group m-0">
-                        <label class="texto2" for="tema">Escolha um tema ou <a routerLink="/cadastrar-tema">Cadastre um novo</a></label>
+                        <label class="texto2 text-light" for="tema">Escolha um tema ou <a routerLink="/cadastrar-tema">Cadastre um novo</a></label>
                         <select name="tema" id="tema" class="form-control">
                             <option>
                                 teste 123
@@ -33,7 +34,7 @@
                 </div>
 
                 <div class="col-md-6 d-flex justify-content-end">
-                    <button type="button" class=" texto2 btn btn-outline-info w-25">Publicar</button>
+                    <button type="button" class=" texto2 btn btn-outline-light w-25">Publicar</button>
                 </div>
             </div>
 
@@ -41,10 +42,10 @@
             
             <nav class="d-flex justify-content-center">
                 <div class="nav nav-tools" id="nav-bar" role="tablist">
-                    <a class="nav-item nav-link active text-secondary texto2 text-uppercase font-weight-bold" id="nav-home-tab" data-toggle="tab" href="#minhas-postagens"
+                    <a class="nav-item nav-link active text-light texto2 text-uppercase font-weight-bold" id="nav-home-tab" data-toggle="tab" href="#minhas-postagens"
                     role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
                     
-                    <a class="nav-item nav-link text-secondary texto2 text-uppercase font-weight-bold" id="nav-profile-tab"
+                    <a class="nav-item nav-link text-light texto2 text-uppercase font-weight-bold" id="nav-profile-tab"
                     data-toggle="tab" href="#postagens-temas" role="tab"
                     aria-controls="nav-profile" aria-selected="false">Postagens por Tema</a>
 
@@ -55,10 +56,10 @@
                     <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel" aria-labelledby="nav-postagens-tab">
                         <div class="row mt-3 mb-3">
                             <div class="col-md-10 pr-0">
-                                <input class="form-control w-100" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar">
+                                <input class="form-control w-100 texto2" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar">
                             </div>
                             <div class="col-md-2 pl-0">
-                                <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+                                <button class="btn btn-outline-warning w-100 texto2 ml-2" type="button">Pesquisar</button>
                             </div>
                         </div>
                     </div>
@@ -66,17 +67,16 @@
                     <div class="tab-pane fade show active" id="postagens-temas" role="tabpanel" aria-labelledby="nav-temas-tab">
                         <div class="row mt-3 mb-3">
                             <div class="col-md-10 pr-0">
-                                <input class="form-control w-100" type="search" placeholder="Pesquisar tema" aria-label="Pesquisar">
+                                <input class="form-control w-100 texto2" type="search" placeholder="Pesquisar tema" aria-label="Pesquisar">
                             </div>
                             <div class="col-md-2 pl-0">
-                                <button class="btn btn-outline-warning w-100" type="button">Pesquisar</button>
+                                <button class="btn btn-outline-warning w-100 texto2 ml-2" type="button">Pesquisar</button>
                             </div>
                         </div>
                     </div>
 
                 </div>
-
-
-        </div>
+           </div>
+      </div>
     </div>
 </div>

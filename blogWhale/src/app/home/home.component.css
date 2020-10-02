@@ -1,6 +1,18 @@
 p{
     font-size: large;
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+
+.texto1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.texto2 {
+    font-family: 'Montserrat', sans-serif;
+
+}
 
 .parallax{
     background-image: url('https://images.unsplash.com/photo-1586767321602-d71a8434c30e?ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80');
