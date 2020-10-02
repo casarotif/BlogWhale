@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+
+texto1 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.texto2 {
+    font-family: 'Montserrat', sans-serif;
+
+}
+.bgimg1{
+    background-image: url(https://images.unsplash.com/photo-1572284795851-e2c9da37db05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80);
+    max-width: fit-content;
+}

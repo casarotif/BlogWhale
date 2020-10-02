@@ -1,29 +1,29 @@
 <div class="container">
     
-    <div class="row">
-        <div class="col-md-4">
+    <div class="row ">
+        <div class="col-md-4 ">
             <app-perfil-lateral></app-perfil-lateral>
         </div>
 
         <div class="col-md-8">
 
-            <h3 class="text-center mb-4 text-monospace">Postagens sobre vida marítima - Geral</h3>
+            <h3 class="text-center mb-4 texto1">Postagens sobre vida marítima</h3>
 
-            <div class="form-group">
-                <label class="text-monospace" for="titulo">Título:</label>
-                <input type="text" class="form-control" id="titulo" 
+            <div class="form-group texto2">
+                <label class="texto2" for="titulo">Título:</label>
+                <input type="text" class="form-control texto2" id="titulo" 
                 placeholder="Digite o título aqui">
             </div>
 
-            <div class="form-group">
+            <div class="form-group texto2">
                 <label class="text-monospace" for="texto">Texto:</label>
                 <textarea class="form-control" id="texto" rows="3" placeholder="Digite o texto da postagem aqui"></textarea>
             </div>
 
-            <div class="row d-flex align-itens-end">
+            <div class="row d-flex align-itens-end texto2">
                 <div class="col-md-6">
                     <div class="form-group m-0">
-                        <label class="text-monospace" for="tema">Escolha um tema ou <a routerLink="/cadastrar-tema">Cadastre um novo</a></label>
+                        <label class="texto2" for="tema">Escolha um tema ou <a routerLink="/cadastrar-tema">Cadastre um novo</a></label>
                         <select name="tema" id="tema" class="form-control">
                             <option>
                                 teste 123
@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="col-md-6 d-flex justify-content-end">
-                    <button type="button" class="btn btn-outline-info w-25">Publicar</button>
+                    <button type="button" class=" texto2 btn btn-outline-info w-25">Publicar</button>
                 </div>
             </div>
 
@@ -41,10 +41,10 @@
             
             <nav class="d-flex justify-content-center">
                 <div class="nav nav-tools" id="nav-bar" role="tablist">
-                    <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab" href="#minhas-postagens"
+                    <a class="nav-item nav-link active text-secondary texto2 text-uppercase font-weight-bold" id="nav-home-tab" data-toggle="tab" href="#minhas-postagens"
                     role="tab" aria-controls="nav-home" aria-selected="true">Minhas Postagens</a>
                     
-                    <a class="nav-item nav-link text-secondary font-weight-bold" id="nav-profile-tab"
+                    <a class="nav-item nav-link text-secondary texto2 text-uppercase font-weight-bold" id="nav-profile-tab"
                     data-toggle="tab" href="#postagens-temas" role="tab"
                     aria-controls="nav-profile" aria-selected="false">Postagens por Tema</a>
 
