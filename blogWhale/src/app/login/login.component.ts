@@ -11,7 +11,7 @@ import { AuthService } from '../service/auth.service';
 export class LoginComponent implements OnInit {
 
   userLogin: UserLogin = new UserLogin() 
-  ]
+  
 
   constructor(
     private authService: AuthService,
