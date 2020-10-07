@@ -24,7 +24,6 @@ export class CadastroComponent implements OnInit {
     this.senha = event.target.value
   }
 
-
     cadastrar() {
       if(this.senha === this.user.senha){
 

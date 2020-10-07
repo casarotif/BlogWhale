@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Postagem } from '../model/Postagem';
 
 @Injectable({
   providedIn: 'root'
@@ -17,4 +18,7 @@ export class PostagemService {
 
   }
 
+  postPostagem(postagem: Postagem){
+    return this.http.post('http://localhost:9000/postagens', postagem, this.token)
+  }
 }

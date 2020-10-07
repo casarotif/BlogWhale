@@ -13,28 +13,28 @@
             <div class="form-group texto2">
                 <label class="texto2 text-light" for="titulo">Título:</label>
                 <input type="text" class="form-control texto2" id="titulo" 
-                placeholder="Digite o título aqui">
+                placeholder="Digite o título aqui" [(ngModel)]='postagem.titulo'>
             </div>
 
             <div class="form-group texto2">
                 <label class="texto2 text-light" for="texto">Texto:</label>
-                <textarea class="form-control" id="texto" rows="3" placeholder="Digite o texto da postagem aqui"></textarea>
+                <textarea class="form-control" id="texto" rows="3" placeholder="Digite o texto da postagem aqui" [(ngModel)]='postagem.texto'></textarea>
             </div>
 
             <div class="row d-flex align-itens-end texto2">
                 <div class="col-md-6">
                     <div class="form-group m-0">
-                        <label class="texto2 text-light" for="tema">Escolha um tema ou <a routerLink="/cadastrar-tema">Cadastre um novo</a></label>
-                        <select name="tema" id="tema" class="form-control">
-                            <option>
-                                teste 123
+                        <label class="texto2 text-light" for="tema">Escolha um tema ou <a routerLink='/cadastro-tema'>Cadastre um novo</a></label>
+                        <select name="tema" id="tema" class="form-control" [(ngModel)]='idTema' (change)= 'findByIdTema()'>
+                            <option *ngFor='let item of listaTemas' value={{item.id}}>
+                                {{item.descricao}}
                             </option>
                         </select>
                     </div>
                 </div>
 
                 <div class="col-md-6 d-flex justify-content-end">
-                    <button type="button" class=" texto2 btn btn-outline-light w-25">Publicar</button>
+                    <button type="button" class=" texto2 btn btn-outline-light w-25" (click)='publicar()'>Publicar</button>
                 </div>
             </div>
 
@@ -66,7 +66,7 @@
                             <div class="row">
                                 <div class="col-md-12">
 
-                                    <div class="card mt-5" *ngFor='let item of listaPostagens'>
+                                    <div class="card mt-5" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
                                         <div class="card-header">
                                             <div class="row d-flex align-itens-center">
                                                 <div class="col-md-8">
@@ -92,7 +92,7 @@
                                                 <p class="card-text" aria-describedby="texto">
                                                     {{item.texto}}
                                                 </p>
-                                                <small id="texto" class="form-text m-0 text-muted mb-3 texto2">Postado em {{item.data}} </small>
+                                                <small id="texto" class="form-text m-0 text-muted mb-3 texto2">Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} </small>
                                             </div>
 
                                         </div>
