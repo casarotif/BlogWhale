@@ -51,70 +51,68 @@
 
                 </div>
             </nav>
-
+                    <!--Postagens-->
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="minhas-postagens" role="tabpanel" aria-labelledby="nav-postagens-tab">
                         <div class="row mt-3 mb-3">
                             <div class="col-md-10 pr-0">
-                                <input class="form-control w-100 texto2" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar">
+                                <input class="form-control w-100 texto2" type="search" placeholder="Pesquisar postagem" aria-label="Pesquisar"
+                                [(ngModel)]='titulo'>
                             </div>
                             <div class="col-md-2 pl-0">
-                                <button class="btn btn-outline-warning w-100 texto2 ml-2" type="button">Pesquisar</button>
+                                <button class="btn btn-outline-warning w-100 texto2 ml-2" type="button" (click)='findByTituloPostagem()'>Pesquisar</button>
                              </div>
                         </div>
-
+                    <!--Postagens--> 
                             <div class="row">
-                                <div class="col-md-12">
-
-                                    <div class="card mt-5" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+                                <div class="col-md-12" *ngFor='let item of listaTemas | orderBy : key : reverse'>
+                                    <div *ngFor='let post of item.postagem'>
+                                    <div class="card mt-5 mb-5">
                                         <div class="card-header">
                                             <div class="row d-flex align-itens-center">
                                                 <div class="col-md-8">
                                                     <div class="card-title">
-                                                        <h5 class="card.title">{{item.titulo}}</h5>
-                                                            <small>Tema: {{item.tema.descricao}} </small>
+                                                        <h5 class="card.title">{{post.titulo}}</h5>
+                                        
                                                     </div>
-                                                    <div class="col md-4 d-flex justify-content-end">
-                                                        <button class="mr-3 btn btn-outling-info" [routerLink]="['/edit-post', item.id]">
-                                                            Editar
-                                                        </button>
-                                                        
-                                                        <button class="btn btn-outline-danger ml-3"
-                                                        [routerLink]="['/delete-post', item.id]">
-                                                            Apagar
-                                                        </button>
-
-                                                    </div>
-
+                                            
                                                 </div>
                                             </div>
                                             
                                             <div class="card-body">
                                                 <p class="card-text" aria-describedby="texto">
-                                                    {{item.texto}}
+                                                    {{post.texto}}
                                                 </p>
-                                                <small id="texto" class="form-text m-0 text-muted mb-3 texto2">Postado em {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} </small>
+                                                <small id="texto" class="form-text m-0 text-muted mb-3 texto2">Postado em {{post.data | date: 'dd/MM/yyyy'}} às {{post.data | date: 'HH:mm'}} </small>
                                             </div>
 
                                         </div>
+                                        </div>
+                                       
                                     </div>
                                 </div>
                             </div>
                     </div>
-
+                    <!-- TEMAS -->
                     <div class="tab-pane fade show active" id="postagens-temas" role="tabpanel" aria-labelledby="nav-temas-tab">
                         <div class="row mt-3 mb-3">
                             <div class="col-md-10 pr-0">
-                                <input class="form-control w-100 texto2" type="search" placeholder="Pesquisar tema" aria-label="Pesquisar">
+                                <input class="form-control w-100 texto2" type="search" placeholder="Pesquisar tema" aria-label="Pesquisar" [(ngModel)]='nomeTema'>
                             </div>
                             <div class="col-md-2 pl-0">
-                                <button class="btn btn-outline-warning w-100 texto2 ml-2" type="button">Pesquisar</button>
+                                <button class="btn btn-outline-warning w-100 texto2 ml-2" type="button" (click)='findByNomeTema'>Pesquisar</button>
                             </div>
                         </div>
-                    </div>
 
+
+
+                        
+                    </div>
+                    <!-- TEMAS  -->
                 </div>
            </div>
       </div>
     </div>
 </div>
+
+
